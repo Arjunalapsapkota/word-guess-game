@@ -1,69 +1,99 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-    <script src="assets/javascript/main.js"></script>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Page Title</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+ <script
+ src="https://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous"></script>
+ <script src="assets/javascript/main.js"></script>
    
 <style>
-    body{
-        background:pink;
-    }
-    .jumbotron{
-        padding:1rem 0.5rem;
-    }
-    .image-clue{
-        
-        width:50%;
-        height:auto;
+ body{
+    background:pink;
+ }
+ .jumbotron{
+    padding:1rem 0.5rem;
+ }
+ .image-clue{
+    width:50%;
+    height:auto;
     }
  
-    .col-md-6{
-        border: 2px dashed white;
+ .col-md-6{
+    border: 2px dashed white;
+ }
+ .awesome{
+    font-family: 'Indie Flower', cursive;
     }
-    .awesome{
-        font-family: 'Indie Flower', cursive;
+ .visible{
+    color:white;
+    font-size:3rem;
     }
-    .visible{
-        color:white;
-        font-size:3rem;
-    }
-    .position-center{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        padding:1rem;
-    }
+ .position-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+ }
+ .big-font{
+    font: 40px sans-serif;
+ }
 </style>
 </head>
 <body class="awesome">
-    <div class="jumbotron text-center">
-        <h1>Welcome to the Word Guess Game</h1>
-        <h3>A fun packed-Game</h3>
+ <div class="jumbotron text-center">
+  <h1>Welcome to the Word Guess Game</h1>
+  <h3>A fun packed-Game</h3>
         
-    </div>
-    <div class="container bg-dark text-light">
-        <div class="row">
-            <div class="col col-xs-12 col-sm-12 col-md-6 position-center">
-                <div class="position-center" id="clue-box">
-                
+ </div>
+
+ <div class="container bg-dark text-light">
+    <div class="row">
+        <div class="col col-xs-12 col-sm-12 col-md-6 position-center">
+       
+            <div class="row">
+                <div class="col col-md-12 col-lg-12 position-center">
+                <div class="clue-box">
                 <p>press the following key to play the game</p>
+                </div>
+                            
+                </div>
                 
+                <div class="col col-md-12 col-lg-12 position-center big-font">
+                <div class="clue-name">
                 <button class="btn btn-primary play">Play</button>
                 </div>
-            </div>
-            <div class="col col-xs-12 col-sm-12 col-md-6">
-                <p class="visible position-center">Make a guess</p>
                 </div>
+            </div>
+                
+                
+                
+            </div>
+            
+        <div class="col col-xs-12 col-sm-12 col-md-6">
+            <div>
+                <p class="text-center big-font">Make a guess</p>
+                <p class="text-center big-font">Guess the title of this song</p>
+            </div>
+            <div class="blank">
+
+            </div>
+            <div class="life">
+
+            </div>
+            <div class="letter">
+
+            </div>
+            
+        
+        </div>
 
         </div>
     </div>
