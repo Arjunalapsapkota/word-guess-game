@@ -61,7 +61,8 @@ while (counter>0){
         
     document.addEventListener('keypress', (event) => {
     var guess = event.key;
-    alert(guess);
+    
+    $(".letter").append(" "+guess);
     });
     for(var j=0;j<song.length;j++){
         if(song[j]===guess){
