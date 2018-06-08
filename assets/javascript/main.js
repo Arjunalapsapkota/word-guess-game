@@ -74,7 +74,7 @@ $(document).ready(function(){
                 console.log("------------")
                 $(".life").empty();
                     $(".life").append(life); 
-                    alert(life);
+                    
                     $(".life").append(": lives remaining"); 
                     
                 for(var j=0;j<song.length;j++)
