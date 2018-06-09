@@ -39,7 +39,8 @@ $(document).ready(function(){
             console.log(song);                              //CONSOLE!        
             var counter=song.length;                        //CONSOLE!
             console.log(counter);  
-            var life=5;                         
+            var life=5;
+            var flag=1;                         
             var clue = $(".clue-box");
             var artistImage="assets/images/"+number+".jpg";
             var image = $("<img>");
@@ -81,23 +82,30 @@ $(document).ready(function(){
                 {
                     if(song[j]===guess){
                         answerArray[j]=guess;
-                        console.log(answerArray);
+                        /*console.log(answerArray);
                         $("#blank").empty();
                         $("#blank").append(answerArray.join(" "));
                         counter--;
                         console.log(counter);
-                        
+                        */
+                       counter--;
+                       flag=0;
                     }
                         
-                }life--;
+                }if(flag==1){
+                    life--;
+                }
+                flag=1; //reset flag!!
+                $("#blank").empty();
+                $("#blank").append(answerArray.join("  "));
                 if (counter==0){
                     $(".message").empty();
-                    $(".message").append("Congratulations!!");
+                    $(".message").replaceWith("Congratulations!!");
             
                 }
                 if(life==0) {
                     $(".message").empty();
-                    $(".message").append("You lost the game");
+                    $(".message").replaceWith("You lost the game");
                 }
             }
     });    
