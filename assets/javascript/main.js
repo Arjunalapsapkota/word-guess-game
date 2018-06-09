@@ -28,7 +28,7 @@ $(document).ready(function(){
     var song=""
     var answerArray=[];
     var guess="";
-    
+    var previousGuess="";
     
     $(".play").on("click", function() 
     {    
@@ -73,40 +73,41 @@ $(document).ready(function(){
                 console.log("song length")
                 console.log(song.length);
                 console.log("------------")
-                $(".life").empty();
-                    $(".life").append(life); 
-                    
-                    $(".life").append(": lives remaining"); 
-                    
+                       
                 for(var j=0;j<song.length;j++)
                 {
                     if(song[j]===guess){
-                        answerArray[j]=guess;
-                        /*console.log(answerArray);
-                        $("#blank").empty();
-                        $("#blank").append(answerArray.join(" "));
+                        
+                        if(guess!=previousGuess)
+                        {answerArray[j]=guess;
+                        previousGuess=guess;
                         counter--;
-                        console.log(counter);
-                        */
-                       counter--;
-                       flag=0;
+                        flag=0;}
                     }
                         
                 }if(flag==1){
                     life--;
                 }
                 flag=1; //reset flag!!
+                $(".life").empty();
+                $(".life").append(life); 
+                $(".life").append(": lives remaining");  
                 $("#blank").empty();
                 $("#blank").append(answerArray.join("  "));
-                if (counter==0){
-                    $(".message").empty();
-                    $(".message").replaceWith("Congratulations!!");
-            
-                }
                 if(life==0) {
                     $(".message").empty();
                     $(".message").replaceWith("You lost the game");
+                    alert("you lost the game");
+                    var but=("<button class=\"btn btn-primary\">Play Again</button>");
+                    $(".message").append(but);
                 }
+                if (counter==0){
+                    $(".message").empty();
+                    $(".message").replaceWith("Congratulations!!");
+                    alert("congratulations!!");
+            
+                }
+               
             }
     });    
 });
